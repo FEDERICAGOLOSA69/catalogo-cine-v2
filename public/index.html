@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Cine V2</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+ 
+
+    <div id="pantallaInicio">
+
+    <div class="contenidoInicio">
+
+        <h1 class="logoInicio">
+            🎬 CINEMEX
+        </h1>
+
+        <h2>
+            Catálogo Cine V2
+        </h2>
+
+        <div class="palomita">
+            ✅
+        </div>
+
+        <p>
+            Cargando cartelera...
+        </p>
+
+    </div>
+
+</div>
+
+   <div id="sistema">
+
+<h1>🎬 Catálogo Cine V2</h1>
+
+<div id="panelAdmin">
+
+    <div class="formulario">
+
+        <input id="titulo" placeholder="Título">
+
+        <input id="genero" placeholder="Género">
+
+        <input id="descripcion" placeholder="Descripción">
+
+        <input id="precio" type="number" placeholder="Precio">
+
+        <input
+    id="fecha"
+    type="date"
+>
+
+        <input id="horario1" placeholder="Horario 1">
+
+        <input id="horario2" placeholder="Horario 2">
+
+        <input id="horario3" placeholder="Horario 3">
+
+        <input id="imagen" placeholder="URL Imagen">
+
+        <button id="btnGuardar">
+            Guardar Película
+        </button>
+
+    </div>
+
+    <hr>
+
+<h2>
+📊 Resumen de Ventas
+</h2>
+
+<div class="controlesCarrusel">
+
+    <button
+        onclick="moverIzquierda('estadisticas')"
+    >
+        ◀
+    </button>
+
+    <button
+        onclick="moverDerecha('estadisticas')"
+    >
+        ▶
+    </button>
+
+</div>
+
+
+<div id="estadisticas">
+
+</div>
+
+    <h2>
+        🎟 Compras Realizadas
+    </h2>
+
+    <div class="controlesCarrusel">
+
+    <button
+        onclick="moverIzquierda('listaCompras')"
+    >
+        ◀
+    </button>
+
+    <button
+        onclick="moverDerecha('listaCompras')"
+    >
+        ▶
+    </button>
+
+</div>
+
+
+    <div id="listaCompras">
+
+    </div>
+
+</div>
+
+<hr>
+
+<section
+
+    id="zonaCompra"
+    class="zona-compra">
+
+        <h2>🍿 Compra de Boletos</h2>
+
+        <h3 id="peliculaSeleccionada">
+            Ninguna película seleccionada
+        </h3>
+
+        <div class="pantalla">
+            PANTALLA
+        </div>
+
+        <div id="asientos"></div>
+
+        <p id="asientoElegido">
+            Asiento seleccionado:
+        </p>
+
+        <button id="btnConfirmar">
+            Confirmar Compra
+        </button>
+
+    </section>
+
+    <hr>
+
+<div id="cartelera"></div>
+
+</div>
+
+<div id="modalCompra" class="modal">
+
+    <div class="modalContenido">
+
+        <h2>
+            ✅ Compra Realizada
+        </h2>
+
+        <p id="detalleCompra"></p>
+
+        <hr>
+
+        <h3>
+            🍿 ¿Quieres conseguir boletos para nuestros próximos estrenos?
+        </h3>
+
+        <button id="btnEstrenos">
+            Sí, quiero enterarme
+        </button>
+
+        <button id="btnCerrarModal">
+            Cerrar
+        </button>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

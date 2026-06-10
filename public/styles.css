@@ -1,0 +1,601 @@
+body{
+    background:#111;
+    color:white;
+    font-family:Arial, sans-serif;
+    margin:0;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    color:#e50914;
+    margin-bottom:30px;
+}
+
+/* FORMULARIO */
+
+.formulario{
+    background:#1c1c1c;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:30px;
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.formulario input{
+    flex:1 1 250px;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:6px;
+}
+
+.formulario button{
+    background:#e50914;
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+}
+
+.formulario button:hover{
+    background:#ff2435;
+}
+
+/* COMPRA */
+
+.zona-compra{
+
+    background:#1b1b1b;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    margin-bottom:40px;
+
+}
+
+.zona-compra h2{
+
+    color:#ffd700;
+
+    margin-top:0;
+
+}
+
+.pantalla{
+
+    width:500px;
+
+    max-width:90%;
+
+    margin:20px auto;
+
+    background:white;
+
+    color:black;
+
+    text-align:center;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    box-shadow:0 0 25px white;
+
+}
+
+/* ASIENTOS */
+
+#asientos{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(5,60px);
+
+    gap:10px;
+
+    justify-content:center;
+
+    margin-top:25px;
+
+}
+
+.asiento{
+
+    background:#444;
+
+    color:white;
+
+    padding:15px;
+
+    text-align:center;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.asiento:hover{
+
+    background:#666;
+
+    transform:scale(1.05);
+
+}
+
+.seleccionado{
+
+    background:#00aa55;
+
+}
+
+#asientoElegido{
+
+    text-align:center;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    margin-top:20px;
+
+    background:#222;
+
+padding:15px;
+
+border-radius:10px;
+
+max-width:350px;
+
+margin:20px auto;
+
+text-align:center;
+
+}
+
+#btnConfirmar{
+
+    display:block;
+
+    margin:20px auto;
+
+    background:#00aa55;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+#btnConfirmar:hover{
+
+    background:#00c965;
+
+}
+
+/* CARTELERA */
+
+#cartelera{
+
+    display:flex;
+
+    gap:20px;
+
+    overflow-x:auto;
+
+    padding:20px;
+
+    scroll-behavior:smooth;
+
+}
+
+#cartelera::-webkit-scrollbar{
+
+    height:10px;
+
+}
+
+#cartelera::-webkit-scrollbar-thumb{
+
+    background:#e50914;
+
+    border-radius:10px;
+
+}
+
+.card{
+
+    background:#222;
+
+    width:280px;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+    box-shadow:
+    0 0 10px rgba(0,0,0,.5);
+
+}
+
+.card:hover{
+
+    transform:scale(1.05);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+}
+
+.card-body{
+
+    padding:15px;
+
+}
+
+.card h3{
+
+    margin-top:0;
+
+}
+
+.precio{
+
+    color:#00ff88;
+
+    font-weight:bold;
+
+    font-size:20px;
+
+}
+
+.horarios{
+
+    margin-top:10px;
+
+}
+
+.horarios span{
+
+    background:#444;
+
+    padding:5px 10px;
+
+    border-radius:5px;
+
+    margin-right:5px;
+
+}
+
+.btn-comprar{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:12px;
+
+    background:#e50914;
+
+    color:white;
+
+    border:none;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+}
+
+.btn-comprar:hover{
+
+    background:#ff2435;
+
+}
+
+.ocupado{
+
+    background:#cc0000;
+
+    cursor:not-allowed;
+
+}
+
+.ocupado:hover{
+
+    transform:none;
+
+    background:#cc0000;
+
+}
+
+.btnHorario{
+    background:#444;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-right:5px;
+    margin-top:10px;
+}
+
+.btnHorario:hover{
+    background:#e50914;
+}
+
+.btn-eliminar{
+
+    width:100%;
+    margin-top:10px;
+
+    padding:10px;
+
+    background:#444;
+
+    color:white;
+
+    border:none;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+}
+
+.btn-eliminar:hover{
+
+    background:#b30000;
+
+}
+
+#pantallaInicio{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:black;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.contenidoInicio{
+
+    text-align:center;
+
+}
+
+.logoInicio{
+
+    color:#e50914;
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+.contenidoInicio h2{
+
+    color:white;
+
+    font-size:40px;
+
+}
+
+.palomita{
+
+    font-size:100px;
+
+    margin:30px 0;
+
+    animation: brincar 1s infinite;
+
+}
+
+@keyframes brincar{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+#panelAdmin{
+    display:none;
+}
+
+#panelAdmin{
+    display:none;
+}
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.8);
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+}
+
+.modalContenido{
+
+    background:#222;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    width:400px;
+
+    text-align:center;
+
+    color:white;
+}
+
+.modalContenido button{
+
+    margin:10px;
+
+    padding:10px 20px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+}
+
+#estadisticas{
+
+    display:flex;
+
+    gap:20px;
+
+    overflow-x:auto;
+
+    padding:10px;
+
+    scroll-behavior:smooth;
+
+}
+
+#listaCompras{
+
+    display:flex;
+
+    gap:20px;
+
+    overflow-x:auto;
+
+    padding:10px;
+
+    scroll-behavior:smooth;
+
+}
+
+.compraCard{
+
+    min-width:250px;
+
+    background:#222;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    flex-shrink:0;
+
+}
+
+.controlesCarrusel{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:10px;
+
+    margin-bottom:10px;
+
+}
+
+.controlesCarrusel button{
+
+    background:#e50914;
+
+    color:white;
+
+    border:none;
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+.controlesCarrusel button:hover{
+
+    transform:scale(1.1);
+
+}
