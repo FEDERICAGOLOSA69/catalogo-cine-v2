@@ -495,8 +495,21 @@ document
     const total =
         precioSeleccionado *
         asientosSeleccionados.length;
+const nombreCliente =
+    document.getElementById(
+        "nombreCliente"
+    ).value;
 
+if(!nombreCliente){
+
+    alert(
+        "Ingresa el nombre del comprador"
+    );
+
+    return;
+}
         await fetch(
+            
     "/api/peliculas/compra",
     {
         method: "POST",
@@ -504,21 +517,24 @@ document
             "Content-Type":
                 "application/json"
         },
-        body: JSON.stringify({
+body: JSON.stringify({
 
-            pelicula:
-                peliculaSeleccionada,
+    nombre:
+        nombreCliente,
 
-            horario:
-                horarioSeleccionado,
+    pelicula:
+        peliculaSeleccionada,
 
-            asientos:
-                asientosSeleccionados,
+    horario:
+        horarioSeleccionado,
 
-            total:
-                total
+    asientos:
+        asientosSeleccionados,
 
-        })
+    total:
+        total
+
+})
     }
 );
 
@@ -600,9 +616,13 @@ async function cargarCompras(){
 
     compras.forEach(compra => {
 
-        lista.innerHTML += `
+lista.innerHTML += `
 
         <div class="compraCard">
+
+            <p>
+                👤 ${compra.nombre}
+            </p>
 
             <h3>
                 🎬 ${compra.pelicula}

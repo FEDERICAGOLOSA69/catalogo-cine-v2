@@ -28,6 +28,8 @@ const Pelicula = mongoose.model(
 
 const compraSchema = new mongoose.Schema({
 
+    nombre: String,
+
     pelicula: String,
 
     horario: String,
