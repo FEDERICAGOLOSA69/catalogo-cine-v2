@@ -880,6 +880,21 @@ document
         precioSeleccionado *
         asientosSeleccionados.length;
 
+    console.log(
+        "Precio:",
+        precioSeleccionado
+    );
+
+    console.log(
+        "Asientos:",
+        asientosSeleccionados.length
+    );
+
+    console.log(
+        "Total:",
+        total
+    );
+
     const cambio =
         efectivo - total;
 
@@ -888,16 +903,13 @@ document
         document.getElementById(
             "cambioCalculado"
         ).innerHTML =
-
-            "💸 Cambio: $" +
-            cambio;
+            "💸 Cambio: $" + cambio;
 
     }else{
 
         document.getElementById(
             "cambioCalculado"
         ).innerHTML =
-
             "❌ Efectivo insuficiente";
 
     }
