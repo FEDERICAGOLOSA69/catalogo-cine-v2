@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo Cine V2</title>
+    <title>SOMOS CINEMEX 
+        ¡Prepárate para disfrutar la magia de la gran pantalla! ✨
+    </title>
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,7 +22,9 @@
         </h1>
 
         <h2>
-            Catálogo Cine V2
+            🎬 ¡Bienvenido a Catálogo de Cine! 🍿
+
+Descubre un mundo lleno de historias, emociones y aventuras. Explora nuestra colección de películas, conoce sus detalles y encuentra tu próxima favorita. Desde clásicos inolvidables hasta los estrenos más recientes, aquí el cine cobra vida.
         </h2>
 
         <div class="palomita">
@@ -37,7 +41,17 @@
 
    <div id="sistema">
 
-<h1>🎬 Catálogo Cine V2</h1>
+<div id="headerPrincipal">
+
+    <h1 id="tituloSistema">
+        🎬 CARTELERA DE CINEMEX
+    </h1>
+
+    <h2 id="subtituloSistema">
+        🍿 Disfruta las mejores películas
+    </h2>
+
+</div>
 
 <div id="panelAdmin">
 
@@ -138,7 +152,7 @@
         </h3>
 
         <div class="pantalla">
-            PANTALLA
+            Por favor, escoge un pelicula. 🫵🏻😸  ⬇️
         </div>
 
         <div id="asientos"></div>
@@ -152,6 +166,31 @@
     type="text"
     placeholder="Nombre del comprador"
 >
+
+<select id="metodoPago">
+
+    <option value="">
+        Selecciona método de pago
+    </option>
+
+    <option value="Debito">
+        💳 Tarjeta de Débito
+    </option>
+
+    <option value="Efectivo">
+        💵 Efectivo
+    </option>
+
+</select>
+
+<input
+    id="efectivoRecibido"
+    type="number"
+    placeholder="¿Con cuánto paga?"
+    style="display:none;"
+>
+
+<p id="cambioCalculado"></p>
 
 <button id="btnConfirmar">
     Confirmar Compra

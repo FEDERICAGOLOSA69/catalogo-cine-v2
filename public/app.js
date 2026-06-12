@@ -17,6 +17,16 @@ if(acceso){
 
 if(password === "1234"){
 
+    document.getElementById(
+    "tituloSistema"
+).innerHTML =
+    "🛠️ PANEL DE ADMINISTRACIÓN";
+
+document.getElementById(
+    "subtituloSistema"
+).innerHTML =
+    "👤 Administrador: Toni | 📊 Gestión de Películas y Ventas";
+
     esAdmin = true;
 
     document.getElementById(
@@ -500,6 +510,41 @@ const nombreCliente =
         "nombreCliente"
     ).value;
 
+
+    const metodoPago =
+    document.getElementById(
+        "metodoPago"
+    ).value;
+
+if(!metodoPago){
+
+    alert(
+        "Selecciona un método de pago"
+    );
+
+    return;
+}
+
+if(metodoPago === "Efectivo"){
+
+    const efectivo =
+        Number(
+            document.getElementById(
+                "efectivoRecibido"
+            ).value
+        );
+
+    if(efectivo < total){
+
+        alert(
+            "El efectivo es insuficiente"
+        );
+
+        return;
+    }
+
+}
+
 if(!nombreCliente){
 
     alert(
@@ -786,3 +831,75 @@ function moverIzquierda(id){
     });
 
 }
+
+document
+.getElementById("metodoPago")
+.addEventListener("change", () => {
+
+    const metodo =
+        document.getElementById(
+            "metodoPago"
+        ).value;
+
+    const efectivo =
+        document.getElementById(
+            "efectivoRecibido"
+        );
+
+    if(metodo === "Efectivo"){
+
+        efectivo.style.display =
+            "block";
+
+    }else{
+
+        efectivo.style.display =
+            "none";
+
+        document.getElementById(
+            "cambioCalculado"
+        ).innerHTML = "";
+
+    }
+
+});
+
+
+document
+.getElementById("efectivoRecibido")
+.addEventListener("input", () => {
+
+    const efectivo =
+        Number(
+            document.getElementById(
+                "efectivoRecibido"
+            ).value
+        );
+
+    const total =
+        precioSeleccionado *
+        asientosSeleccionados.length;
+
+    const cambio =
+        efectivo - total;
+
+    if(cambio >= 0){
+
+        document.getElementById(
+            "cambioCalculado"
+        ).innerHTML =
+
+            "💸 Cambio: $" +
+            cambio;
+
+    }else{
+
+        document.getElementById(
+            "cambioCalculado"
+        ).innerHTML =
+
+            "❌ Efectivo insuficiente";
+
+    }
+
+});
